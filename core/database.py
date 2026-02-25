@@ -6,26 +6,18 @@ def init_db():
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
 
-    # ALERT TABLE
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS alerts (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
             message TEXT,
             severity TEXT,
-            score INTEGER
-        )
-    """)
-
-    # PACKET TABLE (expert mode)
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS packets (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+            score INTEGER,
             src_ip TEXT,
             dst_ip TEXT,
             protocol TEXT,
-            port INTEGER
+            port INTEGER,
+            packet_count INTEGER
         )
     """)
 
@@ -33,12 +25,16 @@ def init_db():
     conn.close()
 
 
-# ===============================
-# SAVE ALERT
-# ===============================
-def save_alert(message, severity):
+def save_alert(
+    message,
+    severity,
+    src_ip=None,
+    dst_ip=None,
+    protocol=None,
+    port=None,
+    packet_count=None
+):
 
-    # threat score mapping
     score_map = {
         "INFO": 10,
         "WARNING": 70,
@@ -51,26 +47,19 @@ def save_alert(message, severity):
     cursor = conn.cursor()
 
     cursor.execute("""
-        INSERT INTO alerts (message, severity, score)
-        VALUES (?, ?, ?)
-    """, (message, severity, score))
-
-    conn.commit()
-    conn.close()
-
-# ===============================
-# SAVE PACKETS
-# ===============================
-
-def save_packet(src_ip, dst_ip, protocol, port):
-
-    conn = sqlite3.connect(DB_NAME)
-    cursor = conn.cursor()
-
-    cursor.execute("""
-        INSERT INTO packets (src_ip, dst_ip, protocol, port)
-        VALUES (?, ?, ?, ?)
-    """, (src_ip, dst_ip, protocol, port))
+        INSERT INTO alerts
+        (message, severity, score, src_ip, dst_ip, protocol, port, packet_count)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    """, (
+        message,
+        severity,
+        score,
+        src_ip,
+        dst_ip,
+        protocol,
+        port,
+        packet_count
+    ))
 
     conn.commit()
     conn.close()
