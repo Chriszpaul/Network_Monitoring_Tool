@@ -12,6 +12,40 @@ st.set_page_config(
 )
 
 # ==============================
+# LIVE CONFIG PANEL
+# ==============================
+st.sidebar.title("⚙️ Live Configuration")
+
+CONFIG["WINDOW_SIZE"] = st.sidebar.slider(
+    "Packet Window Size",
+    10, 200,
+    CONFIG["WINDOW_SIZE"]
+)
+
+CONFIG["PORT_SCAN_THRESHOLD"] = st.sidebar.slider(
+    "Port Scan Threshold",
+    3, 50,
+    CONFIG["PORT_SCAN_THRESHOLD"]
+)
+
+CONFIG["TRAFFIC_SPIKE_THRESHOLD"] = st.sidebar.slider(
+    "Traffic Spike Threshold",
+    50, 1000,
+    CONFIG["TRAFFIC_SPIKE_THRESHOLD"]
+)
+
+CONFIG["AUTO_REFRESH_SEC"] = st.sidebar.slider(
+    "Dashboard Refresh (sec)",
+    1, 10,
+    CONFIG["AUTO_REFRESH_SEC"]
+)
+
+CONFIG["SAVE_RAW_PACKETS"] = st.sidebar.checkbox(
+    "Save Raw Packets (Expert Mode)",
+    CONFIG["SAVE_RAW_PACKETS"]
+)
+
+# ==============================
 # LIGHT PROFESSIONAL THEME
 # ==============================
 st.markdown("""
