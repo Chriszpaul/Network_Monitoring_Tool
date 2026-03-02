@@ -11,23 +11,29 @@ LIVE_ACTIVITY_THRESHOLD = 5     # lightweight alert
 # =====================================
 # PORT SCAN DETECTION
 # =====================================
+from core.config import CONFIG
+
 def detect_port_scan(traffic):
 
     alerts = []
 
-    for ip, ports in traffic.items():
+    threshold = CONFIG["PORT_SCAN_THRESHOLD"]
 
-        # remove invalid ports safely
-        unique_ports = {p for p in ports if p is not None}
+    for src_ip, targets in traffic.items():
 
-        if len(unique_ports) >= PORT_SCAN_THRESHOLD:
-            alerts.append(
-                f"⚠ Possible Port Scan detected from {ip} "
-                f"(unique ports: {len(unique_ports)})"
-            )
+        for dst_ip, ports in targets.items():
+
+            unique_ports = {p for p in ports if p is not None}
+
+            if len(unique_ports) >= threshold:
+
+                alerts.append(
+                    f"⚠ Nmap-like Port Scan detected | "
+                    f"{src_ip} → {dst_ip} | "
+                    f"Ports scanned: {len(unique_ports)}"
+                )
 
     return alerts
-
 
 # =====================================
 # TRAFFIC SPIKE DETECTION

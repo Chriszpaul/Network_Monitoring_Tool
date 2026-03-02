@@ -27,7 +27,11 @@ def analyze_packets(packets):
 
             protocol_stats[proto] += 1
 
-            traffic.setdefault(src, []).append(port)
+            # 🔥 ADVANCED TRAFFIC MAP
+            traffic.setdefault(src, {})
+            traffic[src].setdefault(dst, [])
+            traffic[src][dst].append(port)
+
             packet_count[src] = packet_count.get(src, 0) + 1
 
             packet_details.append({

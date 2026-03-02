@@ -285,3 +285,195 @@
 [00:47:25] INFO | ℹ Active connection from 34.139.124.58 (packets: 19) | 10.70.109.135 -> 34.139.124.58
 [00:47:25] INFO | ℹ Active connection from 10.70.109.135 (packets: 23) | 10.70.109.135 -> 34.139.124.58
 [00:47:31] INFO | ℹ Active connection from 10.70.109.135 (packets: 21) | 10.70.109.135 -> 34.139.124.58
+[01:14:44] INFO | ℹ Live traffic observed from 10.70.109.135 | 10.70.109.135 -> 20.42.73.28
+[01:14:44] INFO | ℹ Live traffic observed from 20.42.65.90 | 10.70.109.135 -> 20.42.73.28
+[01:14:44] INFO | ℹ Active connection from 10.70.109.135 (packets: 15) | 10.70.109.135 -> 20.42.73.28
+[01:14:44] INFO | ℹ Active connection from 20.42.65.90 (packets: 10) | 10.70.109.135 -> 20.42.73.28
+[01:14:46] INFO | ℹ Live traffic observed from 20.42.73.28 | 20.42.73.28 -> 10.70.109.135
+[01:14:46] INFO | ℹ Active connection from 20.42.73.28 (packets: 15) | 20.42.73.28 -> 10.70.109.135
+[01:14:49] INFO | ℹ Active connection from 10.70.109.135 (packets: 5) | 8.8.8.8 -> 10.70.109.135
+[01:14:49] INFO | ℹ Live traffic observed from 10.70.109.135 | 8.8.8.8 -> 10.70.109.135
+[01:14:49] INFO | ℹ Active connection from 34.139.124.58 (packets: 9) | 10.70.109.135 -> 34.139.124.58
+[01:14:49] INFO | ℹ Live traffic observed from 34.139.124.58 | 10.70.109.135 -> 34.139.124.58
+[01:14:49] INFO | ℹ Active connection from 10.70.109.135 (packets: 14) | 10.70.109.135 -> 34.139.124.58
+[01:14:50] INFO | ℹ Active connection from 34.139.124.58 (packets: 22) | 10.70.109.135 -> 20.42.73.28
+[01:14:50] INFO | ℹ Active connection from 10.70.109.135 (packets: 25) | 10.70.109.135 -> 20.42.73.28
+[01:15:03] INFO | ℹ Active connection from 10.70.109.135 (packets: 16) | 10.70.109.135 -> 74.117.182.12
+[01:15:03] INFO | ℹ Active connection from 20.207.73.82 (packets: 3) | 10.70.109.135 -> 74.117.182.12
+[01:15:03] INFO | ℹ Active connection from 34.139.124.58 (packets: 15) | 10.70.109.135 -> 74.117.182.12
+[01:15:21] INFO | ℹ Live traffic observed from 20.50.88.238 | 20.50.88.244 -> 10.70.109.135
+[01:15:21] INFO | ℹ Active connection from 8.8.8.8 (packets: 3) | 20.50.88.244 -> 10.70.109.135
+[01:15:21] INFO | ℹ Live traffic observed from 20.50.88.244 | 20.50.88.244 -> 10.70.109.135
+[01:15:21] INFO | ℹ Active connection from 20.50.88.238 (packets: 8) | 20.50.88.244 -> 10.70.109.135
+[01:15:21] INFO | ℹ Active connection from 140.82.112.25 (packets: 3) | 20.50.88.244 -> 10.70.109.135
+[01:15:21] INFO | ℹ Active connection from 10.70.109.135 (packets: 20) | 20.50.88.244 -> 10.70.109.135
+[01:15:21] INFO | ℹ Active connection from 20.50.88.244 (packets: 5) | 20.50.88.244 -> 10.70.109.135
+[01:15:33] INFO | ℹ Active connection from 20.42.73.30 (packets: 4) | 20.42.73.30 -> 10.70.109.135
+[01:15:33] INFO | ℹ Active connection from 20.50.88.244 (packets: 3) | 20.42.73.30 -> 10.70.109.135
+[01:15:33] INFO | ℹ Active connection from 10.70.109.135 (packets: 24) | 20.42.73.30 -> 10.70.109.135
+[01:15:33] INFO | ℹ Active connection from 1.1.1.1 (packets: 3) | 20.42.73.30 -> 10.70.109.135
+[01:15:34] INFO | ℹ Active connection from 1.1.1.1 (packets: 12) | 10.70.109.135 -> 1.1.1.1
+[01:15:34] INFO | ℹ Active connection from 10.70.109.135 (packets: 13) | 10.70.109.135 -> 1.1.1.1
+[01:15:34] INFO | ℹ Live traffic observed from 1.1.1.1 | 10.70.109.135 -> 1.1.1.1
+[01:15:34] INFO | ℹ Live traffic observed from 20.42.73.30 | 20.42.73.30 -> 10.70.109.135
+[01:15:34] INFO | ℹ Active connection from 20.42.73.30 (packets: 7) | 20.42.73.30 -> 10.70.109.135
+[01:15:45] INFO | ℹ Active connection from 10.70.109.135 (packets: 3) | 10.70.109.135 -> 20.42.73.30
+[01:15:45] INFO | ℹ Live traffic observed from 1.1.1.1 | 1.1.1.1 -> 10.70.109.135
+[01:15:45] INFO | ℹ Active connection from 1.1.1.1 (packets: 10) | 1.1.1.1 -> 10.70.109.135
+[01:15:45] INFO | ℹ Active connection from 10.70.109.135 (packets: 12) | 1.1.1.1 -> 10.70.109.135
+[01:15:45] INFO | ℹ Live traffic observed from 10.70.109.135 | 1.1.1.1 -> 10.70.109.135
+[01:15:45] INFO | ℹ Active connection from 10.70.109.135 (packets: 6) | 10.70.109.135 -> 1.1.1.1
+[01:15:45] INFO | ℹ Active connection from 1.1.1.1 (packets: 5) | 10.70.109.135 -> 1.1.1.1
+[01:16:15] INFO | ℹ Active connection from 10.70.109.135 (packets: 4) | 34.139.124.58 -> 10.70.109.135
+[01:16:15] INFO | ℹ Active connection from 34.139.124.58 (packets: 4) | 34.139.124.58 -> 10.70.109.135
+[01:16:30] INFO | ℹ Active connection from 10.70.109.135 (packets: 7) | 185.199.111.154 -> 10.70.109.135
+[01:16:30] INFO | ℹ Live traffic observed from 10.70.109.135 | 185.199.111.154 -> 10.70.109.135
+[01:16:43] INFO | ℹ Active connection from 10.70.109.135 (packets: 5) | 8.8.8.8 -> 10.70.109.135
+[01:16:43] INFO | ℹ Active connection from 8.8.8.8 (packets: 3) | 8.8.8.8 -> 10.70.109.135
+[01:16:49] INFO | ℹ Active connection from 10.70.109.135 (packets: 4) | 10.70.109.135 -> 185.199.111.154
+[01:16:49] INFO | ℹ Active connection from 185.199.111.154 (packets: 4) | 10.70.109.135 -> 185.199.111.154
+[01:17:51] INFO | ℹ Active connection from 10.70.109.135 (packets: 7) | 10.70.109.135 -> 34.139.124.58
+[01:17:51] INFO | ℹ Live traffic observed from 10.70.109.135 | 10.70.109.135 -> 34.139.124.58
+[01:17:51] INFO | ℹ Active connection from 74.117.182.12 (packets: 3) | 10.70.109.135 -> 34.139.124.58
+[01:18:25] INFO | ℹ Live traffic observed from 8.8.8.8 | 10.70.109.135 -> 20.42.73.24
+[01:18:25] INFO | ℹ Live traffic observed from 10.70.109.135 | 10.70.109.135 -> 20.42.73.24
+[01:18:25] INFO | ℹ Active connection from 20.42.73.24 (packets: 9) | 10.70.109.135 -> 20.42.73.24
+[01:18:25] INFO | ℹ Active connection from 8.8.8.8 (packets: 5) | 10.70.109.135 -> 20.42.73.24
+[01:18:25] INFO | ℹ Live traffic observed from 20.42.73.24 | 10.70.109.135 -> 20.42.73.24
+[01:18:25] INFO | ℹ Active connection from 10.70.109.135 (packets: 19) | 10.70.109.135 -> 20.42.73.24
+[01:18:26] INFO | ℹ Active connection from 10.70.109.135 (packets: 4) | 10.70.109.135 -> 34.139.124.58
+[01:18:26] INFO | ℹ Live traffic observed from 10.70.109.135 | 34.139.124.58 -> 10.70.109.135
+[01:18:26] INFO | ℹ Active connection from 34.139.124.58 (packets: 10) | 34.139.124.58 -> 10.70.109.135
+[01:18:26] INFO | ℹ Live traffic observed from 34.139.124.58 | 34.139.124.58 -> 10.70.109.135
+[01:18:26] INFO | ℹ Active connection from 10.70.109.135 (packets: 15) | 34.139.124.58 -> 10.70.109.135
+[01:18:27] INFO | ℹ Active connection from 10.70.109.135 (packets: 20) | 10.70.109.135 -> 34.139.124.58
+[01:18:27] INFO | ℹ Active connection from 34.139.124.58 (packets: 28) | 10.70.109.135 -> 34.139.124.58
+[01:18:37] INFO | ℹ Active connection from 10.70.109.135 (packets: 6) | 10.70.109.135 -> 34.139.124.58
+[01:18:37] INFO | ℹ Active connection from 34.139.124.58 (packets: 7) | 10.70.109.135 -> 34.139.124.58
+[01:19:04] INFO | ℹ Live traffic observed from 8.8.8.8 | 10.70.109.135 -> 51.132.193.105
+[01:19:04] INFO | ℹ Active connection from 10.70.109.135 (packets: 13) | 10.70.109.135 -> 51.132.193.105
+[01:19:04] INFO | ℹ Live traffic observed from 10.70.109.135 | 10.70.109.135 -> 51.132.193.105
+[01:19:04] INFO | ℹ Active connection from 8.8.8.8 (packets: 5) | 10.70.109.135 -> 51.132.193.105
+[01:19:04] INFO | ℹ Active connection from 51.132.193.105 (packets: 3) | 10.70.109.135 -> 51.132.193.105
+[01:19:05] INFO | ℹ Active connection from 10.70.109.135 (packets: 28) | 51.105.71.137 -> 10.70.109.135
+[01:19:05] INFO | ℹ Active connection from 51.105.71.137 (packets: 9) | 51.105.71.137 -> 10.70.109.135
+[01:19:05] INFO | ℹ Live traffic observed from 51.105.71.137 | 51.105.71.137 -> 10.70.109.135
+[01:19:05] INFO | ℹ Active connection from 51.132.193.105 (packets: 13) | 51.105.71.137 -> 10.70.109.135
+[01:19:05] INFO | ℹ Live traffic observed from 51.132.193.105 | 51.105.71.137 -> 10.70.109.135
+[01:19:11] INFO | ℹ Active connection from 51.105.71.137 (packets: 10) | 51.132.193.105 -> 10.70.109.135
+[01:19:11] INFO | ℹ Active connection from 10.70.109.135 (packets: 18) | 51.132.193.105 -> 10.70.109.135
+[01:19:11] INFO | ℹ Active connection from 51.132.193.105 (packets: 11) | 51.132.193.105 -> 10.70.109.135
+[01:19:18] INFO | ℹ Active connection from 51.132.193.105 (packets: 15) | 51.132.193.105 -> 10.70.109.135
+[01:19:18] INFO | ℹ Active connection from 10.70.109.135 (packets: 19) | 51.132.193.105 -> 10.70.109.135
+[01:19:28] INFO | ℹ Active connection from 51.132.193.105 (packets: 5) | 74.117.182.12 -> 10.70.109.135
+[01:19:28] INFO | ℹ Active connection from 10.70.109.135 (packets: 20) | 74.117.182.12 -> 10.70.109.135
+[01:19:28] INFO | ℹ Live traffic observed from 20.50.88.233 | 74.117.182.12 -> 10.70.109.135
+[01:19:28] INFO | ℹ Active connection from 20.50.88.233 (packets: 8) | 74.117.182.12 -> 10.70.109.135
+[01:26:55] INFO | ℹ Live traffic observed from 34.139.124.58 | 13.69.239.79 -> 10.70.109.135
+[01:26:55] INFO | ℹ Live traffic observed from 10.70.109.135 | 13.69.239.79 -> 10.70.109.135
+[01:26:55] INFO | ℹ Active connection from 10.70.109.135 (packets: 20) | 13.69.239.79 -> 10.70.109.135
+[01:26:55] INFO | ℹ Active connection from 13.69.239.79 (packets: 3) | 13.69.239.79 -> 10.70.109.135
+[01:26:55] INFO | ℹ Active connection from 34.139.124.58 (packets: 11) | 13.69.239.79 -> 10.70.109.135
+[01:27:02] INFO | ℹ Active connection from 13.69.239.79 (packets: 6) | 10.70.109.135 -> 34.139.124.58
+[01:27:02] INFO | ℹ Active connection from 34.139.124.58 (packets: 17) | 10.70.109.135 -> 34.139.124.58
+[01:27:02] INFO | ℹ Live traffic observed from 13.69.239.79 | 10.70.109.135 -> 34.139.124.58
+[01:27:02] INFO | ℹ Active connection from 10.70.109.135 (packets: 24) | 10.70.109.135 -> 34.139.124.58
+[01:27:13] INFO | ℹ Active connection from 34.139.124.58 (packets: 19) | 10.70.109.135 -> 34.139.124.58
+[01:27:14] INFO | ℹ Active connection from 10.70.109.135 (packets: 3) | 10.70.109.135 -> 34.139.124.58
+[01:27:16] INFO | ℹ Live traffic observed from 34.139.124.58 | 34.139.124.58 -> 10.70.109.135
+[01:27:16] INFO | ℹ Active connection from 34.139.124.58 (packets: 5) | 34.139.124.58 -> 10.70.109.135
+[01:27:17] INFO | ℹ Live traffic observed from 34.139.124.58 | 34.139.124.58 -> 10.70.109.135
+[01:27:17] INFO | ℹ Active connection from 34.139.124.58 (packets: 5) | 34.139.124.58 -> 10.70.109.135
+[01:27:17] INFO | ℹ Active connection from 10.70.109.135 (packets: 3) | 34.139.124.58 -> 10.70.109.135
+[01:27:19] INFO | ℹ Active connection from 34.139.124.58 (packets: 3) | 34.139.124.58 -> 10.70.109.135
+[01:27:19] INFO | ℹ Active connection from 10.70.109.135 (packets: 3) | 34.139.124.58 -> 10.70.109.135
+[01:27:20] INFO | ℹ Active connection from 34.139.124.58 (packets: 4) | 10.70.109.135 -> 34.139.124.58
+[01:27:23] INFO | ℹ Live traffic observed from 34.139.124.58 | 20.50.88.235 -> 10.70.109.135
+[01:27:23] INFO | ℹ Active connection from 10.70.109.135 (packets: 19) | 20.50.88.235 -> 10.70.109.135
+[01:27:23] INFO | ℹ Active connection from 20.50.88.235 (packets: 14) | 20.50.88.235 -> 10.70.109.135
+[01:27:23] INFO | ℹ Active connection from 34.139.124.58 (packets: 5) | 20.50.88.235 -> 10.70.109.135
+[01:27:23] INFO | ℹ Live traffic observed from 10.70.109.135 | 20.50.88.235 -> 10.70.109.135
+[01:27:23] INFO | ℹ Live traffic observed from 20.50.88.235 | 20.50.88.235 -> 10.70.109.135
+[01:27:27] INFO | ℹ Active connection from 34.139.124.58 (packets: 8) | 10.70.109.135 -> 34.139.124.58
+[01:27:27] INFO | ℹ Active connection from 10.70.109.135 (packets: 13) | 10.70.109.135 -> 34.139.124.58
+[01:27:29] INFO | ℹ Active connection from 34.139.124.58 (packets: 4) | 8.8.8.8 -> 10.70.109.135
+[01:27:29] INFO | ℹ Active connection from 10.70.109.135 (packets: 7) | 8.8.8.8 -> 10.70.109.135
+[01:27:33] INFO | ℹ Live traffic observed from 34.139.124.58 | 10.70.109.135 -> 34.139.124.58
+[01:27:33] INFO | ℹ Live traffic observed from 10.70.109.135 | 10.70.109.135 -> 34.139.124.58
+[01:27:33] INFO | ℹ Active connection from 10.70.109.135 (packets: 14) | 10.70.109.135 -> 34.139.124.58
+[01:27:33] INFO | ℹ Active connection from 34.139.124.58 (packets: 10) | 10.70.109.135 -> 34.139.124.58
+[01:27:43] INFO | ℹ Active connection from 10.70.109.135 (packets: 18) | 10.70.109.135 -> 34.139.124.58
+[01:27:43] INFO | ℹ Active connection from 34.139.124.58 (packets: 18) | 10.70.109.135 -> 34.139.124.58
+[01:27:50] INFO | ℹ Active connection from 34.139.124.58 (packets: 13) | 10.70.109.135 -> 34.139.124.58
+[01:27:50] INFO | ℹ Active connection from 10.70.109.135 (packets: 12) | 10.70.109.135 -> 34.139.124.58
+[01:27:53] INFO | ℹ Active connection from 10.70.109.135 (packets: 19) | 34.139.124.58 -> 10.70.109.135
+[01:27:59] INFO | ℹ Active connection from 10.70.109.135 (packets: 13) | 10.70.109.135 -> 34.139.124.58
+[01:27:59] INFO | ℹ Active connection from 34.139.124.58 (packets: 10) | 10.70.109.135 -> 34.139.124.58
+[01:28:05] INFO | ℹ Active connection from 34.139.124.58 (packets: 14) | 10.70.109.135 -> 34.139.124.58
+[01:28:05] INFO | ℹ Active connection from 10.70.109.135 (packets: 15) | 10.70.109.135 -> 34.139.124.58
+[01:28:10] INFO | ℹ Active connection from 34.139.124.58 (packets: 13) | 10.70.109.135 -> 104.97.76.217
+[01:28:10] INFO | ℹ Active connection from 10.70.109.135 (packets: 17) | 10.70.109.135 -> 104.97.76.217
+[01:28:15] INFO | ℹ Live traffic observed from 104.97.76.217 | 10.70.109.135 -> 34.139.124.58
+[01:28:15] INFO | ℹ Active connection from 34.139.124.58 (packets: 8) | 10.70.109.135 -> 34.139.124.58
+[01:28:15] INFO | ℹ Active connection from 104.97.76.217 (packets: 5) | 10.70.109.135 -> 34.139.124.58
+[01:28:15] INFO | ℹ Active connection from 10.70.109.135 (packets: 12) | 10.70.109.135 -> 34.139.124.58
+[01:28:21] INFO | ℹ Active connection from 34.139.124.58 (packets: 15) | 10.70.109.135 -> 34.139.124.58
+[01:28:21] INFO | ℹ Active connection from 10.70.109.135 (packets: 17) | 10.70.109.135 -> 34.139.124.58
+[01:28:24] INFO | ℹ Active connection from 10.70.109.135 (packets: 19) | 74.117.182.12 -> 10.70.109.135
+[01:34:27] INFO | ℹ Active connection from 104.46.162.225 (packets: 9) | 10.70.109.135 -> 8.8.8.8
+[01:34:27] INFO | ℹ Live traffic observed from 8.8.8.8 | 10.70.109.135 -> 8.8.8.8
+[01:34:27] INFO | ℹ Active connection from 10.70.109.135 (packets: 18) | 10.70.109.135 -> 8.8.8.8
+[01:34:28] WARNING | ⚠ Nmap-like Port Scan detected | 8.8.8.8 → 10.70.109.135 | Ports scanned: 5 | 10.70.109.135 -> 8.8.8.8
+[01:34:28] INFO | ℹ Live traffic observed from 10.70.109.135 | 10.70.109.135 -> 8.8.8.8
+[01:34:28] INFO | ℹ Active connection from 8.8.8.8 (packets: 5) | 10.70.109.135 -> 8.8.8.8
+[01:34:28] INFO | ℹ Live traffic observed from 104.46.162.225 | 10.70.109.135 -> 8.8.8.8
+[01:34:28] INFO | ℹ Active connection from 10.70.109.135 (packets: 6) | 10.70.109.135 -> 1.1.1.1
+[01:34:29] INFO | ℹ Active connection from 34.139.124.58 (packets: 10) | 10.70.109.135 -> 34.139.124.58
+[01:34:29] INFO | ℹ Active connection from 10.70.109.135 (packets: 24) | 10.70.109.135 -> 34.139.124.58
+[01:34:29] INFO | ℹ Live traffic observed from 34.139.124.58 | 10.70.109.135 -> 34.139.124.58
+[01:34:29] INFO | ℹ Live traffic observed from 20.189.173.17 | 10.70.109.135 -> 34.139.124.58
+[01:34:29] INFO | ℹ Active connection from 20.189.173.17 (packets: 6) | 10.70.109.135 -> 34.139.124.58
+[01:34:29] INFO | ℹ Active connection from 10.70.109.135 (packets: 20) | 10.70.109.135 -> 34.139.124.58
+[01:34:29] INFO | ℹ Active connection from 34.139.124.58 (packets: 21) | 10.70.109.135 -> 34.139.124.58
+[01:34:36] INFO | ℹ Active connection from 10.70.109.135 (packets: 19) | 34.139.124.58 -> 10.70.109.135
+[01:34:36] INFO | ℹ Active connection from 34.139.124.58 (packets: 22) | 34.139.124.58 -> 10.70.109.135
+[01:34:38] INFO | ℹ Active connection from 10.70.109.135 (packets: 7) | 10.70.109.135 -> 34.139.124.58
+[01:34:38] INFO | ℹ Active connection from 34.139.124.58 (packets: 9) | 10.70.109.135 -> 34.139.124.58
+[01:34:43] INFO | ℹ Live traffic observed from 1.1.1.1 | 1.1.1.1 -> 10.70.109.135
+[01:34:43] INFO | ℹ Active connection from 10.70.109.135 (packets: 25) | 1.1.1.1 -> 10.70.109.135
+[01:34:43] INFO | ℹ Active connection from 34.139.124.58 (packets: 13) | 1.1.1.1 -> 10.70.109.135
+[01:34:43] INFO | ℹ Active connection from 1.1.1.1 (packets: 8) | 1.1.1.1 -> 10.70.109.135
+[01:34:45] INFO | ℹ Active connection from 10.70.109.135 (packets: 11) | 10.70.109.135 -> 34.139.124.58
+[01:34:45] INFO | ℹ Active connection from 34.139.124.58 (packets: 3) | 10.70.109.135 -> 34.139.124.58
+[01:34:45] INFO | ℹ Active connection from 1.1.1.1 (packets: 7) | 10.70.109.135 -> 34.139.124.58
+[01:34:50] INFO | ℹ Active connection from 10.70.109.135 (packets: 17) | 10.70.109.135 -> 34.139.124.58
+[01:34:50] INFO | ℹ Live traffic observed from 10.70.109.135 | 10.70.109.135 -> 34.139.124.58
+[01:34:50] INFO | ℹ Active connection from 34.139.124.58 (packets: 18) | 10.70.109.135 -> 34.139.124.58
+[01:34:50] INFO | ℹ Live traffic observed from 34.139.124.58 | 10.70.109.135 -> 34.139.124.58
+[01:34:56] INFO | ℹ Live traffic observed from 10.70.109.135 | 10.70.109.135 -> 34.139.124.58
+[01:34:56] INFO | ℹ Active connection from 10.70.109.135 (packets: 24) | 10.70.109.135 -> 34.139.124.58
+[01:34:56] INFO | ℹ Live traffic observed from 34.139.124.58 | 10.70.109.135 -> 34.139.124.58
+[01:34:56] INFO | ℹ Active connection from 34.139.124.58 (packets: 23) | 10.70.109.135 -> 34.139.124.58
+[01:34:59] INFO | ℹ Active connection from 34.139.124.58 (packets: 9) | 10.70.109.135 -> 34.139.124.58
+[01:34:59] INFO | ℹ Active connection from 10.70.109.135 (packets: 10) | 10.70.109.135 -> 34.139.124.58
+[01:35:04] INFO | ℹ Active connection from 10.70.109.135 (packets: 21) | 10.70.109.135 -> 34.139.124.58
+[01:35:04] INFO | ℹ Active connection from 34.139.124.58 (packets: 22) | 10.70.109.135 -> 34.139.124.58
+[01:35:07] INFO | ℹ Active connection from 34.139.124.58 (packets: 12) | 10.70.109.135 -> 34.139.124.58
+[01:35:07] INFO | ℹ Active connection from 10.70.109.135 (packets: 16) | 10.70.109.135 -> 34.139.124.58
+[01:35:13] INFO | ℹ Active connection from 10.70.109.135 (packets: 22) | 10.70.109.135 -> 34.139.124.58
+[01:35:13] INFO | ℹ Active connection from 34.139.124.58 (packets: 24) | 10.70.109.135 -> 34.139.124.58
+[01:35:16] INFO | ℹ Active connection from 10.70.109.135 (packets: 10) | 10.70.109.135 -> 34.139.124.58
+[01:35:16] INFO | ℹ Active connection from 34.139.124.58 (packets: 7) | 10.70.109.135 -> 34.139.124.58
+[01:35:18] INFO | ℹ Active connection from 10.70.109.135 (packets: 23) | 34.139.124.58 -> 10.70.109.135
+[01:35:18] INFO | ℹ Active connection from 34.139.124.58 (packets: 12) | 34.139.124.58 -> 10.70.109.135
+[01:35:18] INFO | ℹ Active connection from 20.189.173.2 (packets: 9) | 34.139.124.58 -> 10.70.109.135
+[01:35:18] INFO | ℹ Live traffic observed from 20.189.173.2 | 34.139.124.58 -> 10.70.109.135
+[01:35:23] INFO | ℹ Active connection from 34.139.124.58 (packets: 11) | 20.50.88.233 -> 10.70.109.135
+[01:35:23] INFO | ℹ Active connection from 10.70.109.135 (packets: 19) | 20.50.88.233 -> 10.70.109.135
+[01:35:25] INFO | ℹ Active connection from 34.139.124.58 (packets: 8) | 10.70.109.135 -> 20.50.88.233
+[01:35:25] INFO | ℹ Active connection from 10.70.109.135 (packets: 24) | 10.70.109.135 -> 20.50.88.233
+[01:35:25] INFO | ℹ Active connection from 20.50.88.233 (packets: 15) | 10.70.109.135 -> 20.50.88.233
+[01:35:25] INFO | ℹ Live traffic observed from 20.50.88.233 | 10.70.109.135 -> 20.50.88.233
+[01:35:31] INFO | ℹ Active connection from 34.139.124.58 (packets: 24) | 10.70.109.135 -> 34.139.124.58
+[01:35:39] INFO | ℹ Active connection from 34.139.124.58 (packets: 25) | 10.70.109.135 -> 34.139.124.58
+[01:35:39] INFO | ℹ Active connection from 10.70.109.135 (packets: 25) | 10.70.109.135 -> 34.139.124.58
