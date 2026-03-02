@@ -8,25 +8,19 @@ from core.detector import (
 )
 from core.report import generate_report
 from core.database import init_db, save_alert, save_packet
+from core.config import CONFIG
 
 
 # ===============================
-# CONFIG
+# CONFIG (USER ADJUSTABLE LATER)
 # ===============================
-WINDOW_SIZE = 50   # analyze every 50 packets
+WINDOW_SIZE = 50        # packets per analysis cycle
+SAVE_RAW_PACKETS = True # expert mode switch
 
-
-# ===============================
-# STARTUP
-# ===============================
 print("LIVE CAPTURE STARTED (Ctrl+C to stop)")
 init_db()
 print("Database initialized")
 
-
-# ===============================
-# GLOBAL STORAGE
-# ===============================
 captured_packets = []
 last_alerts = set()
 
@@ -40,11 +34,36 @@ def process_packet(packet):
 
     captured_packets.append(packet)
 
-    # analyze in WINDOWS (not every packet)
+    # analyze only when window is full
     if len(captured_packets) >= WINDOW_SIZE:
 
-        traffic, packet_count = analyze_packets(captured_packets)
+        try:
+            traffic, packet_count, packet_details, protocol_stats = analyze_packets(captured_packets)
 
+        except Exception as e:
+            print("Analyzer error:", e)
+            captured_packets.clear()
+            return
+
+        # ==================================
+        # SAVE RAW PACKETS (EXPERT VIEW)
+        # ==================================
+        if SAVE_RAW_PACKETS:
+            for p in packet_details:
+                try:
+                    save_packet(
+                        src_ip=p.get("src_ip"),
+                        dst_ip=p.get("dst_ip"),
+                        protocol=p.get("protocol"),
+                        port=p.get("port"),
+                        packet_size=p.get("packet_size")
+                    )
+                except Exception as e:
+                    print("Packet save error:", e)
+
+        # ==================================
+        # DETECTION
+        # ==================================
         alerts = []
         alerts += detect_port_scan(traffic)
         alerts += detect_traffic_spike(packet_count)
@@ -53,6 +72,9 @@ def process_packet(packet):
 
         new_alerts = set(alerts) - last_alerts
 
+        # ==================================
+        # SAVE ALERTS
+        # ==================================
         for alert in new_alerts:
 
             if "⚠" in alert:
@@ -62,14 +84,31 @@ def process_packet(packet):
             else:
                 severity = "UNKNOWN"
 
-            save_alert(alert, severity)
+            details = packet_details[-1] if packet_details else {}
 
+            try:
+                save_alert(
+                    message=alert,
+                    severity=severity,
+                    src_ip=details.get("src_ip"),
+                    dst_ip=details.get("dst_ip"),
+                    protocol=details.get("protocol"),
+                    port=details.get("port"),
+                    packet_count=details.get("packet_count")
+                )
+            except Exception as e:
+                print("Alert save error:", e)
+
+        # ==================================
+        # TERMINAL REPORT
+        # ==================================
         if new_alerts:
             generate_report(list(new_alerts))
 
+        # remember last alerts
         last_alerts = set(alerts)
 
-        # clear buffer (window finished)
+        # clear window
         captured_packets.clear()
 
 
