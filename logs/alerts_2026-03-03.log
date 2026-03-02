@@ -477,3 +477,30 @@
 [01:35:31] INFO | ℹ Active connection from 34.139.124.58 (packets: 24) | 10.70.109.135 -> 34.139.124.58
 [01:35:39] INFO | ℹ Active connection from 34.139.124.58 (packets: 25) | 10.70.109.135 -> 34.139.124.58
 [01:35:39] INFO | ℹ Active connection from 10.70.109.135 (packets: 25) | 10.70.109.135 -> 34.139.124.58
+[01:52:26] INFO | Active connection from 10.70.109.135 | 20.189.173.8 -> 10.70.109.135
+[01:52:26] INFO | Active connection from 20.189.173.8 | 20.189.173.8 -> 10.70.109.135
+[01:52:26] INFO | ℹ Live traffic observed from 10.70.109.135 | 20.189.173.8 -> 10.70.109.135
+[01:52:26] INFO | ℹ Live traffic observed from 20.189.173.8 | 20.189.173.8 -> 10.70.109.135
+[01:52:28] INFO | Active connection from 1.1.1.1 | 10.70.109.135 -> 1.1.1.1
+[01:52:28] INFO | ℹ Live traffic observed from 1.1.1.1 | 10.70.109.135 -> 1.1.1.1
+[01:52:38] INFO | Active connection from 10.70.109.135 | 20.42.73.28 -> 10.70.109.135
+[01:52:38] INFO | Active connection from 20.42.73.28 | 20.42.73.28 -> 10.70.109.135
+[01:52:38] INFO | ℹ Live traffic observed from 10.70.109.135 | 20.42.73.28 -> 10.70.109.135
+[01:52:38] INFO | ℹ Live traffic observed from 20.42.73.28 | 20.42.73.28 -> 10.70.109.135
+[01:53:25] CRITICAL | Possible Port Scan from 10.70.109.135 | 10.70.109.135 -> 20.50.88.241
+[01:53:25] INFO | Active connection from 10.70.109.135 | 10.70.109.135 -> 20.50.88.241
+[01:53:25] INFO | Active connection from 8.8.8.8 | 10.70.109.135 -> 20.50.88.241
+[01:53:25] INFO | Active connection from 20.50.80.209 | 10.70.109.135 -> 20.50.88.241
+[01:53:25] INFO | ℹ Live traffic observed from 10.70.109.135 | 10.70.109.135 -> 20.50.88.241
+[01:53:25] INFO | ℹ Live traffic observed from 20.50.80.209 | 10.70.109.135 -> 20.50.88.241
+[01:53:26] INFO | Active connection from 20.50.88.241 | 10.70.109.135 -> 34.139.124.58
+[01:53:26] INFO | Active connection from 34.139.124.58 | 10.70.109.135 -> 34.139.124.58
+[01:53:26] INFO | ℹ Live traffic observed from 20.50.88.241 | 10.70.109.135 -> 34.139.124.58
+[01:53:26] INFO | ℹ Live traffic observed from 34.139.124.58 | 10.70.109.135 -> 34.139.124.58
+[01:53:29] INFO | Active connection from 20.50.80.209 | 10.70.109.135 -> 34.139.124.58
+[01:53:29] INFO | ℹ Live traffic observed from 20.50.80.209 | 10.70.109.135 -> 34.139.124.58
+[01:53:33] INFO | ℹ Live traffic observed from 34.139.124.58 | 34.139.124.58 -> 10.70.109.135
+[01:53:43] INFO | Active connection from 1.1.1.1 | 1.1.1.1 -> 10.70.109.135
+[01:53:43] INFO | ℹ Live traffic observed from 1.1.1.1 | 10.70.109.135 -> 1.1.1.1
+[01:53:46] INFO | Active connection from 34.139.124.58 | 34.139.124.58 -> 10.70.109.135
+[01:53:46] INFO | ℹ Live traffic observed from 34.139.124.58 | 34.139.124.58 -> 10.70.109.135

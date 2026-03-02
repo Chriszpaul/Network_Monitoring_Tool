@@ -8,69 +8,69 @@ ACTIVE_IP_THRESHOLD = 3         # info alert
 LIVE_ACTIVITY_THRESHOLD = 5     # lightweight alert
 
 
-# =====================================
-# PORT SCAN DETECTION
-# =====================================
 from core.config import CONFIG
 
+
+# ===============================
+# PORT SCAN DETECTION
+# ===============================
 def detect_port_scan(traffic):
 
     alerts = []
 
-    threshold = CONFIG["PORT_SCAN_THRESHOLD"]
+    for ip, ports in traffic.items():
 
-    for src_ip, targets in traffic.items():
+        unique_ports = {p for p in ports if p is not None}
 
-        for dst_ip, ports in targets.items():
+        if len(unique_ports) >= CONFIG["PORT_SCAN_THRESHOLD"]:
 
-            unique_ports = {p for p in ports if p is not None}
-
-            if len(unique_ports) >= threshold:
-
-                alerts.append(
-                    f"⚠ Nmap-like Port Scan detected | "
-                    f"{src_ip} → {dst_ip} | "
-                    f"Ports scanned: {len(unique_ports)}"
-                )
+            alerts.append({
+                "message": f"Possible Port Scan from {ip}",
+                "score": CONFIG["PORT_SCAN_SCORE"],
+                "type": "PORT_SCAN"
+            })
 
     return alerts
 
-# =====================================
-# TRAFFIC SPIKE DETECTION
-# =====================================
+
+# ===============================
+# TRAFFIC SPIKE
+# ===============================
 def detect_traffic_spike(packet_count):
 
     alerts = []
 
     for ip, count in packet_count.items():
 
-        if count >= TRAFFIC_SPIKE_THRESHOLD:
-            alerts.append(
-                f"⚠ High traffic spike detected from {ip} "
-                f"(packets: {count})"
-            )
+        if count >= CONFIG["TRAFFIC_SPIKE_THRESHOLD"]:
+
+            alerts.append({
+                "message": f"Traffic spike from {ip} (packets: {count})",
+                "score": CONFIG["TRAFFIC_SPIKE_SCORE"],
+                "type": "TRAFFIC_SPIKE"
+            })
 
     return alerts
 
 
-# =====================================
-# ACTIVE CONNECTION (INFO LEVEL)
-# =====================================
+# ===============================
+# ACTIVE CONNECTION
+# ===============================
 def detect_active_ip(packet_count):
 
     alerts = []
 
     for ip, count in packet_count.items():
 
-        # avoids spam
-        if count >= ACTIVE_IP_THRESHOLD:
-            alerts.append(
-                f"ℹ Active connection from {ip} "
-                f"(packets: {count})"
-            )
+        if count >= CONFIG["ACTIVE_IP_THRESHOLD"]:
+
+            alerts.append({
+                "message": f"Active connection from {ip}",
+                "score": CONFIG["ACTIVE_IP_SCORE"],
+                "type": "ACTIVE_IP"
+            })
 
     return alerts
-
 
 # =====================================
 # LIVE ACTIVITY (LIGHTWEIGHT ALERT)
