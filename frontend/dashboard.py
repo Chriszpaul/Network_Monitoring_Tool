@@ -2,6 +2,8 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 import time
+
+
 from core.config import CONFIG
 
 DB_NAME = "alerts.db"
@@ -14,7 +16,7 @@ st.set_page_config(
 # ==============================
 # LIVE CONFIG PANEL
 # ==============================
-st.sidebar.title("⚙️ Live Configuration")
+st.sidebar.title("Live Configuration")
 
 CONFIG["WINDOW_SIZE"] = st.sidebar.slider(
     "Packet Window Size",
@@ -62,7 +64,7 @@ h1, h2, h3 {
 </style>
 """, unsafe_allow_html=True)
 
-st.title("🛡️ Network Monitoring & Threat Intelligence")
+st.title("Network Monitoring & Threat Intelligence")
 st.caption("Real-time Monitoring • Packet Analysis • Threat Detection")
 
 # ==============================
@@ -114,7 +116,7 @@ if alerts_df.empty and packets_df.empty:
 # ==============================
 # LIVE METRICS
 # ==============================
-st.subheader("📊 Live Overview")
+st.subheader("Live Overview")
 
 col1, col2, col3, col4 = st.columns(4)
 
@@ -128,7 +130,7 @@ st.divider()
 # ==============================
 # FILTERS
 # ==============================
-st.subheader("🔍 Filters")
+st.subheader("Filters")
 
 f1, f2 = st.columns(2)
 
@@ -164,12 +166,12 @@ left, right = st.columns(2)
 
 with left:
     if not packets_df.empty:
-        st.subheader("🌐 Top Source IPs")
+        st.subheader("Top Source IPs")
         st.bar_chart(packets_df["src_ip"].value_counts().head(10))
 
 with right:
     if not packets_df.empty:
-        st.subheader("📡 Protocol Distribution")
+        st.subheader("Protocol Distribution")
         st.bar_chart(packets_df["protocol"].value_counts())
 
 st.divider()
@@ -177,7 +179,7 @@ st.divider()
 # ==============================
 # LIVE PACKET STREAM
 # ==============================
-st.subheader("🧪 Live Packet Stream (Wireshark Style)")
+st.subheader("Live Packet Stream (Wireshark Style)")
 
 if not packets_df.empty:
     st.dataframe(
@@ -193,7 +195,7 @@ st.divider()
 # ==============================
 # ALERT STREAM
 # ==============================
-st.subheader("🚨 Alert Log")
+st.subheader("Alert Log")
 
 if not alerts_df.empty:
     st.dataframe(
