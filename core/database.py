@@ -24,15 +24,13 @@ def write_log(message):
 # INIT DATABASE
 # =========================
 def init_db():
-
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
 
-    # ALERT TABLE
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS alerts (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+            timestamp TEXT,
             message TEXT,
             severity TEXT,
             score INTEGER,
@@ -44,11 +42,10 @@ def init_db():
         )
     """)
 
-    # RAW PACKETS TABLE
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS packets (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+            timestamp TEXT,
             src_ip TEXT,
             dst_ip TEXT,
             protocol TEXT,
@@ -66,14 +63,16 @@ def init_db():
 # =========================
 def save_packet(src_ip, dst_ip, protocol, port, packet_size):
 
+    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
 
     cursor.execute("""
         INSERT INTO packets
-        (src_ip, dst_ip, protocol, port, packet_size)
-        VALUES (?, ?, ?, ?, ?)
-    """, (src_ip, dst_ip, protocol, port, packet_size))
+        (timestamp, src_ip, dst_ip, protocol, port, packet_size)
+        VALUES (?, ?, ?, ?, ?, ?)
+    """, (current_time, src_ip, dst_ip, protocol, port, packet_size))
 
     conn.commit()
     conn.close()
@@ -100,14 +99,17 @@ def save_alert(
 
     score = score_map.get(severity, 0)
 
+    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
 
     cursor.execute("""
         INSERT INTO alerts
-        (message, severity, score, src_ip, dst_ip, protocol, port, packet_count)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        (timestamp, message, severity, score, src_ip, dst_ip, protocol, port, packet_count)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
     """, (
+        current_time,
         message,
         severity,
         score,

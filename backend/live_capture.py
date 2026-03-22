@@ -10,7 +10,9 @@ from core.report import generate_report
 from core.database import init_db, save_alert, save_packet
 from core.config import CONFIG
 
+import os
 
+STOP_FILE = "stop.signal"
 # ===============================
 # CONFIG
 # ===============================
@@ -142,4 +144,10 @@ def process_packet(packet):
 # ===============================
 # START SNIFFING
 # ===============================
-sniff(prn=process_packet, store=False)
+def should_stop(pkt):
+    return os.path.exists(STOP_FILE)
+
+sniff(prn=process_packet, store=False, stop_filter=should_stop)
+
+
+

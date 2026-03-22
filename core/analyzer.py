@@ -1,11 +1,11 @@
-from scapy.layers.inet import IP, TCP, UDP
+from scapy.layers.inet import IP, TCP, UDP, ICMP
 
 def analyze_packets(packets):
 
     traffic = {}
     packet_count = {}
     packet_details = []
-    protocol_stats = {"TCP": 0, "UDP": 0, "OTHER": 0}
+    protocol_stats = {}
 
     for pkt in packets:
 
@@ -17,23 +17,51 @@ def analyze_packets(packets):
             proto = "OTHER"
             port = None
 
+            # ============================
+            # PROTOCOL DETECTION (UPGRADED)
+            # ============================
             if TCP in pkt:
-                proto = "TCP"
                 port = pkt[TCP].dport
 
+                if port == 80:
+                    proto = "HTTP"
+                elif port == 443:
+                    proto = "HTTPS"
+                elif port == 22:
+                    proto = "SSH"
+                elif port == 21:
+                    proto = "FTP"
+                elif port == 25:
+                    proto = "SMTP"
+                else:
+                    proto = "TCP"
+
             elif UDP in pkt:
-                proto = "UDP"
                 port = pkt[UDP].dport
 
-            protocol_stats[proto] += 1
+                if port == 53:
+                    proto = "DNS"
+                else:
+                    proto = "UDP"
 
-            # 🔥 ADVANCED TRAFFIC MAP
-            traffic.setdefault(src, {})
-            traffic[src].setdefault(dst, [])
-            traffic[src][dst].append(port)
+            elif ICMP in pkt:
+                proto = "ICMP"
+                port = None
 
+            # ============================
+            # STATS
+            # ============================
+            protocol_stats[proto] = protocol_stats.get(proto, 0) + 1
+
+            # ============================
+            # TRAFFIC MAP
+            # ============================
+            traffic.setdefault(src, []).append(port)
             packet_count[src] = packet_count.get(src, 0) + 1
 
+            # ============================
+            # PACKET DETAILS
+            # ============================
             packet_details.append({
                 "src_ip": src,
                 "dst_ip": dst,
