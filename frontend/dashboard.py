@@ -2,6 +2,8 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 import time
+
+
 from core.config import CONFIG
 
 DB_NAME = "alerts.db"
@@ -14,7 +16,11 @@ st.set_page_config(
 # ==============================
 # LIVE CONFIG PANEL
 # ==============================
+<<<<<<< HEAD
 st.sidebar.title(" Live Configuration")
+=======
+st.sidebar.title("Live Configuration")
+>>>>>>> bdbfba2f558eeb46d0e93ae07dd8ba41432e768c
 
 CONFIG["WINDOW_SIZE"] = st.sidebar.slider(
     "Packet Window Size", 10, 200, CONFIG["WINDOW_SIZE"]
@@ -47,7 +53,11 @@ h1, h2, h3 { color: #0f172a; }
 </style>
 """, unsafe_allow_html=True)
 
+<<<<<<< HEAD
 st.title(" Network Monitoring & Threat Intelligence")
+=======
+st.title("Network Monitoring & Threat Intelligence")
+>>>>>>> bdbfba2f558eeb46d0e93ae07dd8ba41432e768c
 st.caption("Real-time Monitoring • Packet Analysis • Threat Detection")
 
 # ==============================
@@ -102,7 +112,11 @@ if alerts_df.empty and packets_df.empty:
 # ==============================
 # METRICS
 # ==============================
+<<<<<<< HEAD
 st.subheader(" Live Overview")
+=======
+st.subheader("Live Overview")
+>>>>>>> bdbfba2f558eeb46d0e93ae07dd8ba41432e768c
 
 col1, col2, col3, col4 = st.columns(4)
 
@@ -116,7 +130,11 @@ st.divider()
 # ==============================
 # FILTERS (FIXED PROPERLY)
 # ==============================
+<<<<<<< HEAD
 st.subheader(" Filters")
+=======
+st.subheader("Filters")
+>>>>>>> bdbfba2f558eeb46d0e93ae07dd8ba41432e768c
 
 filtered_packets = packets_df.copy()
 filtered_alerts = alerts_df.copy()
@@ -155,6 +173,7 @@ st.divider()
 left, right = st.columns(2)
 
 with left:
+<<<<<<< HEAD
     st.subheader(" Top Source IPs")
     if not filtered_packets.empty:
         st.bar_chart(filtered_packets["src_ip"].value_counts().head(10))
@@ -167,13 +186,27 @@ with right:
         st.bar_chart(filtered_packets["protocol"].value_counts())
     else:
         st.info("No data")
+=======
+    if not packets_df.empty:
+        st.subheader("Top Source IPs")
+        st.bar_chart(packets_df["src_ip"].value_counts().head(10))
+
+with right:
+    if not packets_df.empty:
+        st.subheader("Protocol Distribution")
+        st.bar_chart(packets_df["protocol"].value_counts())
+>>>>>>> bdbfba2f558eeb46d0e93ae07dd8ba41432e768c
 
 st.divider()
 
 # ==============================
 # PACKET STREAM
 # ==============================
+<<<<<<< HEAD
 st.subheader(" Live Packet Stream")
+=======
+st.subheader("Live Packet Stream (Wireshark Style)")
+>>>>>>> bdbfba2f558eeb46d0e93ae07dd8ba41432e768c
 
 if not filtered_packets.empty:
     st.dataframe(
@@ -191,6 +224,7 @@ st.divider()
 # ==============================
 # 🎨 ALERT STYLING
 # ==============================
+<<<<<<< HEAD
 def style_alerts(row):
     if row["severity"] == "CRITICAL":
         return ["background-color: #ffcccc"] * len(row)
@@ -198,6 +232,9 @@ def style_alerts(row):
         return ["background-color: #fff3cd"] * len(row)
     else:
         return [""] * len(row)
+=======
+st.subheader("Alert Log")
+>>>>>>> bdbfba2f558eeb46d0e93ae07dd8ba41432e768c
 
 # ==============================
 # ALERT LOG (FIXED + STYLED)
